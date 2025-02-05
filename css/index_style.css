@@ -62,21 +62,26 @@ nav ul li a:hover, nav ul li a.active {
 
 /* Section Headings */
 h1, h2, h3 {
-    color: #333; /* Dark gray for better contrast */
+    color: #222; /* Changed to dark gray for contrast */
     margin-bottom: 15px;
 }
 
-
 h1 {
     font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added subtle shadow for better readability */
 }
 
 h2 {
     font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
     font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Main Content Styling */
@@ -132,7 +137,7 @@ p.subtitle {
 
 .card h3 {
     margin-bottom: 10px;
-    color: #333;
+    color: #222;
 }
 
 .card p {
