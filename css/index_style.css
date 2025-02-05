@@ -17,14 +17,18 @@ body {
     justify-content: space-between;
 }
 
-/* Navbar styling */
+/* Navbar Styling */
 .navbar {
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar h2 {
@@ -46,12 +50,32 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease-in-out;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #00d4ff;
+nav ul li a:hover, nav ul li a.active {
+    background-color: #00d4ff;
+    color: #fff;
+}
+
+/* Section Headings */
+h1, h2, h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 /* Main Content Styling */
@@ -68,15 +92,6 @@ main {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-}
-
-.main h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.main h4 span {
-    color: #007bff;
 }
 
 blockquote {
@@ -98,63 +113,140 @@ p.subtitle {
     line-height: 1.8;
 }
 
-/* Links inside subtitle */
-p.subtitle a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+/* Card Styling */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-p.subtitle a:hover {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Links Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: underline;
 }
 
-/* Progress Bar Styling */
-.progress-bar {
-    width: 100%;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: 20px;
-    max-width: 600px;
-}
-
-.progress {
-    background-color: #000;
-    height: 20px;
-}
-
-.progress-inner {
-    height: 20px;
-    background-color: #4caf50;
-    transition: width 0.5s ease-in-out;
-}
-
-.progress p {
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
     text-align: center;
-    margin-top: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Embeds */
+iframe {
+    border: none;
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #333;
+    background-color: #222;
     color: white;
-    padding: 20px 0;
+    padding: 20px 10px;
     text-align: center;
-    border-top: 3px solid #007bff;
+    border-top: 3px solid #00d4ff;
     margin-top: 30px;
 }
 
 footer p {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+    color: #00d4ff;
+    margin: 0 5px;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #00d4ff;
+    color: white;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    iframe {
+        height: auto;
+    }
+
+    body {
+        padding: 10px;
+    }
 }
